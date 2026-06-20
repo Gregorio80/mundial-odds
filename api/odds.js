@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
   try {
     const apiRes = await fetch(
-      `https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds/?apiKey=${key}&regions=eu&markets=h2h&oddsFormat=decimal`
+      `https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds/?apiKey=${key}&regions=us,eu&markets=h2h&oddsFormat=decimal`
     );
     const data = await apiRes.json();
     const remaining = apiRes.headers.get('x-requests-remaining') || '';
